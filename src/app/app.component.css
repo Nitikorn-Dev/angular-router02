@@ -1,0 +1,52 @@
+p {
+  font-family: Lato;
+}
+
+:host {
+  --primaryBackground: rgb(220, 220, 255);
+  --primaryColor: rgb(92, 92, 245);
+  --dangerBackground: rgb(255, 220, 220);
+  --dangerColor: rgb(252, 90, 90);
+  --successBackground: rgb(230, 255, 224);
+  --successColor: rgb(90, 252, 90);
+  --warningBackground: rgb(245, 247, 194);
+  --warningColor: rgb(201, 223, 7);
+}
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+}
+.content {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.btn {
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 5px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin: 5px;
+}
+
+.btn-danger {
+  color: var(--dangerColor);
+  background: var(--dangerBackground);
+}
+
+.btn-primary {
+  color: var(--primaryColor);
+  background: var(--primaryBackground);
+}
+
+.btn-success {
+  color: var(--successColor);
+  background: var(--successBackground);
+}
+
+.btn-warning {
+  color: var(--warningColor);
+  background: var(--warningBackground);
+}

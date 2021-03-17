@@ -21,15 +21,12 @@ export class ProductComponent implements OnInit {
     );
   }
 
-a:any;
+  a: any;
   ngOnInit() {
-  
-    
-     this.a = this.productsService.Products().subscribe(res => {
-      
-        return res;
-      })
-  
-    console.log(this.a)
+    this.a = this.productsService.Products().subscribe(res => {
+      return res;
+    });
+
+    console.log(this);
   }
 }

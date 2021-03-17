@@ -4,9 +4,11 @@ import { Product, product } from "../mock/product.mock";
 
 @Injectable({ providedIn: "root" })
 export class ProductsService {
-  constructor() {}
+  constructor() {
+    // console.log(product)
+  }
 
-  getProducts(): Observable<Product[]> {
+  Products(): Observable<Product[]> {
     return of(product);
   }
 }

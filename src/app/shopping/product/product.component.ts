@@ -1,4 +1,8 @@
 import { Component, OnInit } from "@angular/core";
+import { Route } from "@angular/router";
+import { Observable } from "rxjs";
+import { map } from "rxjs/operators";
+import { Product } from "../../mock/product.mock";
 import { ProductsService } from "../products.service";
 
 @Component({
@@ -7,7 +11,25 @@ import { ProductsService } from "../products.service";
   styleUrls: ["./product.component.css"]
 })
 export class ProductComponent implements OnInit {
-  constructor() {}
+  products$: Observable<Product[]>;
 
-  ngOnInit() {}
+  constructor(private productsService: ProductsService) {
+    this.products$ = this.productsService.Products().pipe(
+      map(res => {
+        return res;
+      })
+    );
+  }
+
+a:any;
+  ngOnInit() {
+  
+    
+     this.a = this.productsService.Products().subscribe(res => {
+      
+        return res;
+      })
+  
+    console.log(this.a)
+  }
 }

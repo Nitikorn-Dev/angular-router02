@@ -14,7 +14,7 @@ export class ProductComponent implements OnInit {
   products$: Observable<Product[]>;
 
   constructor(private productsService: ProductsService) {
-    this.products$ = this.productsService.Products().pipe(
+    this.products$ = this.productsService.Produc.pipe(
       map(res => {
         return res;
       })
@@ -23,10 +23,10 @@ export class ProductComponent implements OnInit {
 
   a: any;
   ngOnInit() {
-    this.a = this.productsService.Products().subscribe(res => {
-      return res;
+    this.productsService.Products.subscribe(res => {
+      this.a = res;
     });
 
-    console.log(this);
+    console.log(this.a);
   }
 }

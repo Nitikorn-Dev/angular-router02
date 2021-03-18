@@ -8,7 +8,7 @@ export class ProductsService {
     // console.log(product)
   }
 
-  Products(): Observable<Product[]> {
+  get Products(): Observable<Product[]> {
     return of(product);
   }
 }

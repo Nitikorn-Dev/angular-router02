@@ -14,19 +14,18 @@ export class ProductComponent implements OnInit {
   products$: Observable<Product[]>;
 
   constructor(private productsService: ProductsService) {
-    this.products$ = this.productsService.Produc.pipe(
+    this.products$ = this.productsService.Products.pipe(
       map(res => {
         return res;
       })
     );
   }
 
-  a: any;
   ngOnInit() {
-    this.productsService.Products.subscribe(res => {
-      this.a = res;
-    });
-
-    console.log(this.a);
+   
+  let a =    this.products$.subscribe(res => {
+       return res;
+      })
+      console.log(a)
   }
 }

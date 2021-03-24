@@ -23,9 +23,6 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
    
-  let a =    this.products$.subscribe(res => {
-       return res;
-      })
-      console.log(a)
+
   }
 }

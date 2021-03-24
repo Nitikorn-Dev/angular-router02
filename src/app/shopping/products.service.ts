@@ -39,7 +39,7 @@ myObserver =
   local = new Observable((observer)=>{
     observer.next('A')
     observer.next('B')
-    observer.error(55)
+    // observer.error(55)
     observer.next('C')
     observer.complete()
   })

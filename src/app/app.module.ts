@@ -1,6 +1,9 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import {} from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
+import { MaterialModule } from "./material.module";
 import { RouterModule } from "@angular/router";
 
 import { AppComponent } from "./app.component";
@@ -8,10 +11,10 @@ import { HelloComponent } from "./hello.component";
 import { AppCustomPreloader } from "./app-routing.loader";
 import { Feature3Module } from "./feature-3/feature-3.module";
 
-
-
 @NgModule({
   imports: [
+    MaterialModule,
+    BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
     Feature3Module,

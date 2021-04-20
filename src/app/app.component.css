@@ -50,3 +50,24 @@ p {
   color: var(--warningColor);
   background: var(--warningBackground);
 }
+
+.main-container {
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 1px solid red;
+}
+.sidenav-container {
+  border: 1px solid green;
+  flex: 1 1 auto;
+}
+
+.sidenav {
+  border: 1px solid blue;
+}
+.toolbar {
+  border: 1px solid black;
+}
